@@ -118,4 +118,50 @@ Experiments were conducted in an indoor environment using ROS2 and motion captur
 
 ---
 
-## 📂 Repository Structure
+
+---
+
+## 🧩 Core Behaviors
+
+### 🛑 Stopping Behavior
+- Detect obstacle using filtered ultrasonic data  
+- Hover at current position  
+- Land safely after a delay  
+
+### ↔️ Sliding Behavior
+- Detect obstacle  
+- Perform diagonal motion to avoid obstacle  
+- Resume trajectory after clearance  
+
+---
+
+## 🛠️ Technologies Used
+
+- ROS2 (rclpy)  
+- MAVROS  
+- ArduPilot  
+- VICON Motion Capture  
+- Ultrasonic Sensors (MaxSonar)  
+- Python  
+
+---
+
+## 🚀 How to Run
+
+### Prerequisites
+- ROS2 installed  
+- MAVROS configured  
+- ArduPilot (SITL or real drone)  
+- Ultrasonic sensor publishing to:
+
+/drone2/obstacle_distance
+
+
+### Run Scripts
+
+```bash
+python3 obstacle_avoidance_with_sliding_behavior.py
+
+or
+
+python3 obstacle_avoidance_with_stopping_behavior.py
